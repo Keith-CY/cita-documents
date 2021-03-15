@@ -232,13 +232,13 @@ cita/cita-release  20.2.0-secp256k1-sha3    020a7b1d2225        5 days ago      
 启动节点 0：
 
 ```shell
-docker run -d -p 192.168.10.96:1337:1337 -p 192.168.10.96:4000:4000 -v "`pwd`":/opt/cita-run cita/cita-release:20.2.0-secp256k1-sha3 /bin/bash -c 'cita setup test-chain/0 && cita start test-chain/0 && sleep infinity'
+docker run -d -p 1337:1337 -p 4000:4000 -v "`pwd`":/opt/cita-run cita/cita-release:20.2.0-secp256k1-sha3 /bin/bash -c 'cita setup test-chain/0 && cita start test-chain/0 && sleep infinity'
 ```
 
 启动节点 1：
 
 ```shell
-docker run -d -p 192.168.10.96:1338:1338 -p 192.168.10.96:4001:4001 -v "`pwd`":/opt/cita-run cita/cita-release:20.2.0-secp256k1-sha3 /bin/bash -c 'cita setup test-chain/1 && cita start test-chain/1 && sleep infinity'
+docker run -d -p 1338:1338 -p 4001:4001 -v "`pwd`":/opt/cita-run cita/cita-release:20.2.0-secp256k1-sha3 /bin/bash -c 'cita setup test-chain/1 && cita start test-chain/1 && sleep infinity'
 ```
 
 注意，这里需要暴露 JSON-RPC 的端口外，还需要暴露 CITA 节点网络（4000、4001）的端口，以便两个 CITA 节点可以互联。
