@@ -1116,7 +1116,7 @@ Result：
 
 1. `Data20` - 合约地址
 2. `Data32` - `key` 值和键值对的位置
-3. `BlockNumber` - 快高度
+3. `BlockNumber` - 块高度
 
 * 返回值
 
